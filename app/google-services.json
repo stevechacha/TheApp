@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "244393313984",
+    "project_id": "theapp-942f8",
+    "storage_bucket": "theapp-942f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244393313984:android:ec182b4570679514e94f25",
+        "android_client_info": {
+          "package_name": "com.chacha.theapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244393313984-n1bh9idlvoc1nfjua9qp3313kshbicl9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDjxxoBGwgqUhUfhGXTHZtAUFFd6kDW5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244393313984-n1bh9idlvoc1nfjua9qp3313kshbicl9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

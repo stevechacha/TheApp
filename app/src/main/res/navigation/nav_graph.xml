@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onBoardingFragment">
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.chacha.theapp.core.presentation.fragment.onboarding.OnBoardingFragment"
+        android:label="onboarding_fragment"
+        tools:layout="@layout/onboarding_fragment" >
+        <action
+            android:id="@+id/onBoardingFragmentToAuthFragment"
+            app:destination="@id/authFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.auth.AuthFragment"
+        android:label="auth_fragment"
+        tools:layout="@layout/auth_fragment" >
+        <action
+            android:id="@+id/authFragmentToRegisterFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/authFragmentToLoginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.register.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" >
+        <action
+            android:id="@+id/registerFragmentToCreatePasswordFragment"
+            app:destination="@id/createPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/registerFragmentToLoginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/loginFragmentToRegisterFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/loginFragmentToHomeFragment"
+            app:destination="@id/HomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/loginFragmentToForgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/createPasswordFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.create_password.CreatePasswordFragment"
+        android:label="create_password_fragment"
+        tools:layout="@layout/create_password_fragment" >
+        <action
+            android:id="@+id/createPasswordFragmentToHomeFragment"
+            app:destination="@id/HomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="idNumber"
+            app:argType="string" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPinFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.create_pin.CreatePinFragment"
+        android:label="create_pin_fragment"
+        tools:layout="@layout/create_pin_fragment" />
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.forget_password.ForgetPasswordFragment"
+        android:label="forget_password_fragment"
+        tools:layout="@layout/forget_password_fragment" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.reset_password.ResetPasswordFragment"
+        android:label="reset_password_fragment"
+        tools:layout="@layout/reset_password_fragment" />
+    <fragment
+        android:id="@+id/resetPinFragment"
+        android:name="com.chacha.theapp.feature_auth.presentation.fragment.reset_pin.ResetPinFragment"
+        android:label="reset_pin_fragment"
+        tools:layout="@layout/reset_pin_fragment" />
+
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.chacha.theapp.core.presentation.fragment.home.HomeFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/home_fragment">
+
+        <argument
+            android:name="hasBottomNav"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/AccountFragment"
+        android:name="com.chacha.theapp.feature_accounts.presentation.fragment.account.AccountFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/account_fragment">
+
+        <argument
+            android:name="hasBottomNav"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/LoanFragment"
+        android:name="com.chacha.theapp.feature_loans.presentation.fragment.loan.LoanFragment"
+        android:label="loan_fragment"
+        tools:layout="@layout/loan_fragment" >
+        <argument
+            android:name="hasBottomNav"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/MoreFragment"
+        android:name="com.chacha.theapp.core.presentation.fragment.more.MoreFragment"
+        android:label="more_fragment"
+        tools:layout="@layout/more_fragment" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.chacha.theapp.feature_transaction.fragment.transaction.TransactionFragment"
+        android:label="transaction_fragment"
+        tools:layout="@layout/transaction_fragment">
+    <argument
+        android:name="hasBottomNav"
+        android:defaultValue="true"
+        app:argType="boolean" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/payLoanFragment"
+        android:name="com.chacha.theapp.feature_loans.presentation.fragment.pay_loan.PayLoanFragment"
+        android:label="pay_loan_fragment"
+        tools:layout="@layout/pay_loan_fragment" />
+    <fragment
+        android:id="@+id/pinLockFragment"
+        android:name="com.chacha.theapp.core.presentation.fragment.pinlock.PinLockFragment"
+        android:label="pinlock_fragment"
+        tools:layout="@layout/pinlock_fragment" />
+    <fragment
+        android:id="@+id/requestLoanFragment"
+        android:name="com.chacha.theapp.feature_loans.presentation.fragment.request_loan.RequestLoanFragment"
+        android:label="request_loan_fragment"
+        tools:layout="@layout/request_loan_fragment" />
+
+</navigation>

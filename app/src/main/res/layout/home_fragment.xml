@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".core.presentation.fragment.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/nameAccount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/hi_name"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintEnd_toStartOf="@+id/profileImageAccount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/balanceAccountText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/amount"
+                android:fontFamily="@font/montserrat_medium"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameAccount" />
+
+            <ImageButton
+                android:id="@+id/profileImageAccount"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:foregroundGravity="center"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/account_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewBeerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/currency"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/balanceAccountText" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/transfer_header"
+                app:layout_constraintEnd_toEndOf="@+id/textViewBeerPhone"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewBeerPhone"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBeerPhone" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="95dp"
+                    android:columnCount="3"
+                    android:orientation="horizontal"
+                    android:paddingVertical="16dp"
+                    android:rowCount="2">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/paySomeone"
+                        android:layout_width="116dp"
+                        android:layout_height="110dp"
+                        app:strokeColor="@android:color/transparent"
+                        android:layout_margin="5dp"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="2dp"
+                                android:contentDescription="@string/pay_someone"
+                                android:src="@drawable/ic_transaction" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/pay_someone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/to_wallet_bank_or_mobile_number" />
+
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/requestMoney"
+                        android:layout_width="116dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="5dp"
+                        app:strokeColor="@android:color/transparent"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="2dp"
+                                android:contentDescription="@string/request_money"
+                                android:src="@drawable/ic_transaction" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/request_money" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/request_money_from_thesacco" />
+
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/buyAirtime"
+                        android:layout_width="116dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="5dp"
+                        app:strokeColor="@android:color/transparent"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="2dp"
+                                android:contentDescription="@string/buy_artime"
+                                android:src="@drawable/ic_transaction" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/buy_artime" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/top_up_or_send_artime_across" />
+
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/payBill"
+                        android:layout_width="116dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="5dp"
+                        app:strokeColor="@android:color/transparent"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="2dp"
+                                android:contentDescription="@string/pay_bill"
+                                android:src="@drawable/ic_transaction" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/pay_bill" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/request_money_from_thesacco" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/buyGoods"
+                        android:layout_width="116dp"
+                        android:layout_height="110dp"
+                        app:strokeColor="@android:color/transparent"
+                        android:layout_margin="5dp"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="2dp"
+                                android:contentDescription="transaction"
+                                android:src="@drawable/ic_transaction" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/buy_goods" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/request_money_from_thesacco" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/transferToSaccoAcc"
+                        android:layout_width="116dp"
+                        android:layout_height="110dp"
+                        app:strokeColor="@android:color/transparent"
+                        android:layout_margin="5dp"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="2dp"
+                                android:contentDescription="transaction"
+                                android:src="@drawable/ic_transaction" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textSize="12sp"
+                                android:text="@string/sacco_transfer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@string/sacco_transfer_hint"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Next Row" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="5dp"
+                        app:cardElevation="2dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginTop="2dp"
+                                android:contentDescription="transaction"
+                                android:src="@drawable/ic_transaction" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Pay someone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Send money to a friend or family member"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
